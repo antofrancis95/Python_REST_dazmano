@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block content %}
+	     {% for post in posts %}
+			 
+			 <head>
+				<meta name="viewport" content="width=device-width, initial-scale=1">
+				<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+				<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+				<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+			</head>
+           <article class="media content-section">
+			  <div class="media-body">
+			    <div class="article-metadata">
+			      <small class="text-muted">{{ post.author }}</small>
+			      <small class="text-muted">{{ post.Date }}</small>
+			    </div>
+			    <h2><a class="article-title" href="#">{{ post.title }}</a></h2>
+		       </div>
+					 </article>
+					 
+					 <div class="dropdown">
+						<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
+						<span class="caret"></span></button>
+						<ul class="dropdown-menu">
+							<li><a href="#">Employee</a></li>
+							<li><a href="#">Students</a></li>
+							<li><a href="#">Patients</a></li>
+						</ul>
+					</div>
+	     
+	            
+	     {% endfor %}
+{% endblock content %}  
